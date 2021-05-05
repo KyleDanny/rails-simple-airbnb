@@ -1,0 +1,17 @@
+
+
+  <h2>Add a new Flat</h2>
+
+  <%= simple_form_for(@flat) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :picture_url %>
+    <%= f.input :description %>
+    <%= f.input :number_of_guests %>
+    <%= f.input :price_per_night %>
+    <%= f.submit "Create Flat" %>
+    <%=link_to "Cancel", flats_path %>
+  <% end %>
+
+
+

@@ -1,0 +1,29 @@
+
+<h1> <%= @flat.name %> </h1>
+<h4> <%= @flat.address %> </h4>
+
+<h3> A bit more about this flat... </h3>
+<p> <%= @flat.description %> </p>
+
+<label> Book this place!</label>
+<form>
+  <label for="from">From:</label>
+  <input type="text" placeholder="12/10/2017">
+  <label for="to">To:</label>
+  <input type="text" placeholder="18/10/2017">
+  <input type="submit" value="Book">
+</form>
+
+<h3> Details </h3>
+<ul>
+  <li>👤 <%= @flat.number_of_guests %> </li>
+  <li>€ <%= @flat.price_per_night %> </li>
+</ul>
+
+<p>Share</p>
+<ul>
+  <li>fb</li>
+  <li>insta</li>
+  <li>pint</li>
+  <li>mail</li>
+</ul>
