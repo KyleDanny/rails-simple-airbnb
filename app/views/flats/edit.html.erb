@@ -1,12 +1,21 @@
- <h2>Edit flat</h2>
-
-  <%= simple_form_for(@flat) do |f| %>
-    <%= f.input :name %>
-    <%= f.input :address %>
-    <%= f.input :picture_url %>
-    <%= f.input :description %>
-    <%= f.input :number_of_guests %>
-    <%= f.input :price_per_night %>
-    <%= f.submit "Update Flat" %>
-    <%=link_to "Cancel" %>
-  <% end %>
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-6 m-auto bg-grey">
+      <div class="flat-form m-2">
+        <h2 class="pt-4">Edit flat</h2>
+        <div class="m-2 p-2">
+          <%= simple_form_for(@flat) do |f| %>
+            <%= f.input :name %>
+            <%= f.input :address %>
+            <%= f.input :picture_url %>
+            <%= f.input :description %>
+            <%= f.input :number_of_guests %>
+            <%= f.input :price_per_night %>
+            <%= f.submit "Update Flat", class: "btn btn-primary" %>
+            <%=link_to "Cancel", flats_path, class: "btn btn-danger" %>
+          <% end %>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

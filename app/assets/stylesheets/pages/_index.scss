@@ -1,2 +1,41 @@
 // Import page-specific CSS files here.
 @import "home";
+
+
+body {
+  background-color: white;
+}
+
+
+a {
+   text-decoration: none;
+ }
+
+.red a {
+   color: #d11e36;
+ }
+
+.yellow a {
+   color: #fcb50d;
+ }
+
+.white {
+  color: white;
+}
+
+.black a {
+  text-decoration: none;
+  color: black;
+}
+
+.bg-grey {
+  background-color: #F8F9FA;
+}
+
+.flat-show-card {
+  background: #F8F9FA;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 1px 1px 2px;
+  border-radius: 3px;
+}

@@ -1,29 +1,49 @@
+<div class="container margin-top-negative">
+  <div class="row">
+    <div class="col-8">
+      <div class="card bg-grey p-4 mt-4">
+        <h1> <%= @flat.name %> </h1>
+        <h4> <%= @flat.address %> </h4>
+      </div>
+      <div class="card bg-grey p-4 mt-4">
+        <h3> A bit more about this flat... </h3>
+        <p> <%= @flat.description %> </p>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card bg-grey p-3 mt-4">
+        <label> Book this place!</label>
 
-<h1> <%= @flat.name %> </h1>
-<h4> <%= @flat.address %> </h4>
+        <div class="flat-form m-2">
+          <div class="m-2 p-2">
+            <form>
+              <label for="from">From:</label>
+              <input type="text" placeholder="12/10/2017">
+              <label for="to">To:</label>
+              <input type="text" placeholder="18/10/2017">
+              <input type="submit" value="Book" class="btn btn-success white mt-2">
+            </form>
+          </div>
+        </div>
 
-<h3> A bit more about this flat... </h3>
-<p> <%= @flat.description %> </p>
+      </div>
+      <div class="card bg-grey p-4 mt-4">
+        <h3> Details </h3>
+        <ul class="list-inline">
+          <li class="list-inline-item">👤 <%= @flat.number_of_guests %> </li>
+          <li class="list-inline-item">€ <%= @flat.price_per_night %> </li>
+        </ul>
+      </div>
+      <div class="card bg-grey p-4 mt-4">
 
-<label> Book this place!</label>
-<form>
-  <label for="from">From:</label>
-  <input type="text" placeholder="12/10/2017">
-  <label for="to">To:</label>
-  <input type="text" placeholder="18/10/2017">
-  <input type="submit" value="Book" class="btn btn-success">
-</form>
-
-<h3> Details </h3>
-<ul>
-  <li>👤 <%= @flat.number_of_guests %> </li>
-  <li>€ <%= @flat.price_per_night %> </li>
-</ul>
-
-<p>Share</p>
-<ul>
-  <li>fb</li>
-  <li>insta</li>
-  <li>pint</li>
-  <li>mail</li>
-</ul>
+        <ul class="list-inline">
+          <p class="list-inline-item">Share</p>
+          <li class="list-inline-item">fb</li>
+          <li class="list-inline-item">insta</li>
+          <li class="list-inline-item">pint</li>
+          <li class="list-inline-item">mail</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
