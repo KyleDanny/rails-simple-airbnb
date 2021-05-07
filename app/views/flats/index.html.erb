@@ -9,7 +9,7 @@
 
   <div class="row mt-0">
     <div class="col-12">
-      <p> All <%= @flat_count %> flats. </p>
+      <p> All <%= @flats.count %> flats. </p>
     </div>
   </div>
 
@@ -19,8 +19,7 @@
 
         <div class="card mb-4" style="width: 100%;">
 
-          <img src="https://source.unsplash.com/random/?house" class="card-img-top" alt="...">
-          <div style='background-image: url("#{flat.picture_url}")'></div>
+          <%= image_tag "#{flat.picture_url}", alt: "" %>
 
           <div class="bg-grey p-3">
             <h3 class="card-title"> <%= flat.name %> </h3>
@@ -40,10 +39,6 @@
           </div>
 
         </div>
-
-  </div>
-      <% end %>
-
-
-
+    </div>
+    <% end %>
 </div>

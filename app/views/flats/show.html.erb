@@ -1,5 +1,7 @@
+<div class="map bg-image "><%= image_tag "#{@flat.picture_url}", alt: "" %></div>
+
 <div class="container margin-top-negative">
-  <div class="row">
+  <div class="row mb-4">
     <div class="col-8">
       <div class="card bg-grey p-4 mt-4">
         <h1> <%= @flat.name %> </h1>
@@ -18,9 +20,9 @@
           <div class="m-2 p-2">
             <form>
               <label for="from">From:</label>
-              <input type="text" placeholder="12/10/2017">
+              <input type="text" placeholder="12/10/2017" class="input-group">
               <label for="to">To:</label>
-              <input type="text" placeholder="18/10/2017">
+              <input type="text" placeholder="18/10/2017" class="input-group">
               <input type="submit" value="Book" class="btn btn-success white mt-2">
             </form>
           </div>
@@ -38,10 +40,12 @@
 
         <ul class="list-inline">
           <p class="list-inline-item">Share</p>
-          <li class="list-inline-item">fb</li>
-          <li class="list-inline-item">insta</li>
-          <li class="list-inline-item">pint</li>
-          <li class="list-inline-item">mail</li>
+          <div>
+            <li class="list-inline-item"><i class="fab fa-fw fa-facebook-f"></i></li>
+            <li class="list-inline-item"><i class="fab fa-fw fa-instagram"></i></li>
+            <li class="list-inline-item"><i class="fab fa-pinterest"></i></li>
+            <li class="list-inline-item"><i class="far fa-envelope"></i></li>
+          </div>
         </ul>
       </div>
     </div>

@@ -1,10 +1,16 @@
 class FlatsController < ApplicationController
 
-  # before_action :find_flat, only: [:show, :edit, :update, :destroy]
+  # before_action :set_flat, only: [:show, :edit, :update, :destroy]
 
   def index
-    @flats = Flat.all
-    @flat_count = Flat.count
+    if params[:query].present?
+      @query = params[:query]
+      @flats = Flat.where("name LIKE ?","%#{params[:query]}%")
+      # Preventing SQL Injection and Database error for
+      # unknown characters
+    else
+      @flats = Flat.all
+    end
   end
 
   def show
@@ -45,7 +51,7 @@ class FlatsController < ApplicationController
 
   private
 
-  def find_flat
+  def set_flat
     # @flat = Flat.find(params[:id])
   end
 
